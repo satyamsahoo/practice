@@ -1,0 +1,19 @@
+<p>
+  edit works!
+</p>
+
+
+<form (ngSubmit)="editBlog()">
+  <div class="form-group">
+    <p>BlogTitle</p>
+    <input type="text" name="blogTitle" [(ngModel)]="currentBlog.title">
+
+    <p>Description</p>
+    <input type="text" name="blogDescription" [(ngModel)]="currentBlog.description">
+
+    <p>Body Html</p>
+    <textarea name="blogBodyHtml" [(ngModel)]="currentBlog.bodyHtml"></textarea>
+
+    <button type="submit">Edit Blog</button>
+  </div>
+</form>

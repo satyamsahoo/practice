@@ -1,0 +1,12 @@
+#first{
+    position: relative;
+    background-color: blue;
+    border: solid 3px blueviolet;
+
+}
+
+#second{
+    position: absolute;
+    background-color: chartreuse;
+    border: solid 3px wheat;
+}

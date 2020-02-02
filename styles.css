@@ -1,0 +1,17 @@
+#first{
+    position: relative;
+    background-color: blue;
+    border: solid 3px blueviolet;
+    height: 400px;
+    width: 700px;
+}
+
+#second{
+    position: absolute;
+    background-color: chartreuse;
+    border: solid 3px wheat;
+    height: 200px;
+    width: 300px;
+    right: 100px;
+    top: 50px;
+}

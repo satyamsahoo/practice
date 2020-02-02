@@ -1,0 +1,8 @@
+<div *ngIf="blog">
+    <h1>Blog Name : {{blog.name}}</h1>
+    <div><span>id: {{blog.id}}</span></div>
+    <label>name:
+      <input [(ngModel)]='blog.name' placeholder="name">
+    </label>
+    <button (click)="goBack()">go back</button>
+</div>

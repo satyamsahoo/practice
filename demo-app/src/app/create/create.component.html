@@ -1,0 +1,17 @@
+<p>
+  create works!
+</p>
+<form (ngSubmit)="createBlog()">
+  <div class="form-group">
+    <p>BlogTitle</p>
+    <input type="text" name="blogTitle" [(ngModel)]="blogTitle">
+
+    <p>Description</p>
+    <input type="text" name="blogDescription" [(ngModel)]="blogDescription">
+
+    <p>Body Html</p>
+    <textarea name="blogBodyHtml" [(ngModel)]="blogBodyHtml"></textarea>
+
+    <button type="submit">Create Blog</button>
+  </div>
+</form>

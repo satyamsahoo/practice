@@ -1,0 +1,31 @@
+<div>
+  <h1>User Detail</h1>
+  {{userInfo.firstName}} {{userInfo.lastName}}
+  <hr>
+  <h2>Online Users:</h2>
+  <ul>
+    <li  *ngFor="let user of userList" (click)="userSelectedToChat(user.userId, user.name)">
+      <span>{{user.name}}</span>
+      <app-user-details [userFirstName]="user.name" [userLastName]=""></app-user-details>
+      <app-first-char [name1]="user.name" (notify)="showUserName($event)"></app-first-char>
+    </li>
+  </ul>
+
+
+  <div>
+    <h4>Chating with {{receiverName}}</h4>
+  </div>
+
+  <div #scrollMe [scrollTop]="(scrollToChatTop)?0:scrollMe.scrollHeight" class="chat-history" *ngIf="receiverName">
+
+      <ul>
+          <li class="textCenter" *ngIf="receiverName">
+
+            <span  class="cursorPointer" (click)="loadEarlierPageOfChat()">Load Previous Chat</span>
+            <label>Send message:</label>
+            <input type="text" [(ngModel)]="messageText">
+            <button type="submit" (click)="sendMessage()">Send</button>
+        </ul>
+
+  </div>
+</div>

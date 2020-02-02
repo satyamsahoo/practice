@@ -1,0 +1,8 @@
+<h3>Top Characters</h3>
+<div class="grid">
+  <a *ngFor="let char of characters" class="col-1-4" routerLink="/detail/{{char.id}}">
+    <div class="module">
+      <h4>{{char.name}}</h4>
+    </div>
+  </a>
+</div>

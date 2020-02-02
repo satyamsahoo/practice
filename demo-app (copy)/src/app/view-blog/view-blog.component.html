@@ -1,0 +1,10 @@
+<div>
+    <h2>My Naruto Characters</h2>
+    <ul class="character">
+      <li *ngFor="let char of characters">
+        <a routerLink="/detail/{{char.id}}">
+          <span class="badge">{{char.name}}</span>
+        </a>
+      </li>
+    </ul>
+</div>
